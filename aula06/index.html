@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Receita de Macarronada Italiana</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header class="header">
+      <h1>Receita de Macarronada Italiana</h1>
+
+      <nav class="menu">
+        <a href="#inicio">Início</a>
+        <a href="#ingredientes">Ingredientes</a>
+        <a href="#preparo">Preparo</a>
+        <a href="#dicas">Dicas</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </header>
+
+    <main class="container">
+      
+      <section id="inicio" class="apresentacao">
+        <div class="texto">
+          <h2>Uma receita clássica e deliciosa</h2>
+
+          <p>
+            A macarronada italiana é uma receita tradicional, saborosa e muito
+            apreciada em diferentes ocasiões.
+          </p>
+
+          <p>
+            Nesta página você encontrará os ingredientes, o modo de preparo,
+            dicas extras e um espaço para enviar sua sugestão.
+          </p>
+        </div>
+
+        <div class="imagem">
+          <img src="img/macarronada-italiana.jpg" alt="Macarronada Italiana" />
+        </div>
+      </section>
+
+      <!-- INGREDIENTES -->
+      <section class="receita">
+        <div id="ingredientes" class="box">
+          <h2>Ingredientes</h2>
+
+          <ul>
+            <li>500g de macarrão</li>
+            <li>500g de carne moída</li>
+            <li>2 tomates picados</li>
+            <li>1 cebola picada</li>
+            <li>2 dentes de alho</li>
+            <li>Molho de tomate</li>
+            <li>Sal a gosto</li>
+            <li>Pimenta-do-reino</li>
+            <li>Queijo ralado</li>
+          </ul>
+        </div>
+
+        <div id="preparo" class="box">
+          <h2>Modo de Preparo</h2>
+
+          <ol>
+            <li>Cozinhe o macarrão conforme as instruções da embalagem.</li>
+            <li>Refogue a cebola e o alho.</li>
+            <li>Adicione a carne moída e cozinhe bem.</li>
+            <li>Acrescente os tomates e o molho de tomate.</li>
+            <li>Tempere com sal e pimenta.</li>
+            <li>Misture o molho ao macarrão.</li>
+            <li>Finalize com queijo ralado e sirva.</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- DICAS -->
+      <section id="dicas" class="dicas">
+        <h2>Dicas do Chef</h2>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Use queijo ralado</h3>
+            <p>
+              O queijo ralado dá um sabor especial e melhora a finalização do
+              prato.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Capriche no molho</h3>
+            <p>
+              Um molho bem temperado faz toda a diferença no resultado final.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Sirva quente</h3>
+            <p>
+              A macarronada fica muito mais saborosa quando servida logo após o
+              preparo.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTATO -->
+      <section id="contato" class="contato">
+        <h2>Envie sua sugestão</h2>
+
+        <form>
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" />
+
+          <label for="email">E-mail:</label>
+          <input type="email" id="email" name="email" />
+
+          <label for="sugestao">Sua sugestão:</label>
+          <textarea id="sugestao" name="sugestao" rows="5"></textarea>
+
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
