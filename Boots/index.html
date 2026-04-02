@@ -1,0 +1,680 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Amatic+SC:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Yummy - Projeto Final Bootstrap</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body class="pt-5">
+    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top py-3">
+      <div class="container">
+        <a class="navbar-brand fs-1 fw-bold text-dark" href="#"
+          >Yummy<span class="text-danger">.</span></a
+        >
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#menuNav"
+          aria-controls="menuNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="menuNav">
+          <ul class="navbar-nav ms-auto fw-semibold align-items-center">
+            <li class="nav-item"><a class="nav-link px-3" href="#">Home</a></li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#events">Events</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#chefs">Chefs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#gallery">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link px-3" href="#contact">Contact</a>
+            </li>
+            <li class="nav-item ms-lg-3">
+              <a class="btn btn-danger rounded-pill px-4 py-2" href="#book"
+                >Book a Table</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <section class="bg-light min-vh-100 d-flex align-items-center py-5">
+      <div class="container">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-5 text-center text-lg-start">
+            <h1 class="display-2 fw-bold mb-3">
+              Enjoy Your Healthy<br />Delicious Food
+            </h1>
+            <p class="fs-5 text-secondary mb-4">
+              Descubra sabores incríveis com ingredientes frescos e saudáveis.
+            </p>
+            <div
+              class="d-flex justify-content-center justify-content-lg-start gap-3"
+            >
+              <a
+                href="#book"
+                class="btn btn-danger rounded-pill px-4 py-2 shadow fw-bold"
+                >Book a Table</a
+              >
+            </div>
+          </div>
+          <div class="col-lg-7 text-center">
+            <img
+              src="/Boots/img/menu-item-2.png"
+              alt="Healthy delicious bowl with vegetables"
+              class="img-fluid rounded-circle shadow-lg w-75 border border-5 border-white"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="why-us" class="py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="why-box rounded shadow">
+              <h3
+                class="fw-bold mb-3"
+                style="font-family: &quot;Inter&quot;, sans-serif"
+              >
+                Why Choose Yummy
+              </h3>
+              <p class="mb-4">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <div class="text-center">
+                <a
+                  href="#"
+                  class="btn btn-light rounded-pill px-4 py-2 text-danger fw-bold"
+                  >Learn More</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8">
+            <div class="row gy-4 text-center">
+              <div class="col-md-4">
+                <div class="why-item shadow-sm">
+                  <div class="icon-circle" aria-hidden="true">📋</div>
+                  <h4 class="h5 fw-bold">Corporis voluptates</h4>
+                  <p class="small text-secondary">
+                    Consequuntur sunt aut quasi enim aliquam quae harum.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="why-item shadow-sm">
+                  <div class="icon-circle" aria-hidden="true">💎</div>
+                  <h4 class="h5 fw-bold">Ullamco laboris</h4>
+                  <p class="small text-secondary">
+                    Excepteur sint occaecat cupidatat non proident.
+                  </p>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="why-item shadow-sm">
+                  <div class="icon-circle" aria-hidden="true">📦</div>
+                  <h4 class="h5 fw-bold">Labore conseq</h4>
+                  <p class="small text-secondary">
+                    Aut suscipit aut cum nemo deleniti aut omnis.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="py-5 my-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase mb-2">About Us</h2>
+          <p class="display-5 fw-bold">
+            Learn More <span class="text-danger">About Us</span>
+          </p>
+        </div>
+        <div class="row gy-4 align-items-center">
+          <div class="col-lg-7">
+            <img
+              src="/Boots/img/about.jpg"
+              class="img-fluid rounded shadow-sm mb-4"
+              alt="Inside view of Yummy restaurant"
+            />
+            <div
+              class="border border-4 border-danger p-4 text-center rounded bg-white shadow-sm"
+            >
+              <h3 class="h2 mb-1">Book a Table</h3>
+              <p class="text-danger fw-bold fs-3 mb-0">+1 5589 55488 55</p>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <p class="fst-italic text-secondary">
+              Experiência gastronômica única com ingredientes de alta qualidade.
+            </p>
+            <ul class="list-unstyled mb-4">
+              <li class="mb-3 text-start px-lg-5">
+                <span class="text-danger fw-bold me-2">✔</span> Ingredientes
+                sazonais e frescos.
+              </li>
+              <li class="mb-3 text-start px-lg-5">
+                <span class="text-danger fw-bold me-2">✔</span> Chefes renomados
+                internacionalmente.
+              </li>
+              <li class="mb-3 text-start px-lg-5">
+                <span class="text-danger fw-bold me-2">✔</span> Ambiente
+                acolhedor e moderno.
+              </li>
+            </ul>
+            <img
+              src="/Boots/img/about-2.jpg"
+              class="img-fluid rounded shadow-sm"
+              alt="Healthy meal prepared by chefs"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="py-5 bg-light">
+      <div class="container text-center">
+        <div class="mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase">Our Menu</h2>
+          <p class="display-5 fw-bold">
+            Check Our <span class="text-danger">Yummy Menu</span>
+          </p>
+        </div>
+        <div class="row gy-5">
+          <div class="col-lg-4">
+            <img
+              src="/Boots/img/menu-item-2.png"
+              class="img-fluid rounded-circle shadow border border-5 border-white mb-3 img-menu-size"
+              alt="Menu Item: Healthy Bowl"
+            />
+            <h4 class="fw-bold">Healthy Bowl</h4>
+            <p class="text-danger fw-bold fs-4">$5.95</p>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="/Boots/img/menu-item-3.png"
+              class="img-fluid rounded-circle shadow border border-5 border-white mb-3 img-menu-size"
+              alt="Menu Item: Aut Lucca"
+            />
+            <h4 class="fw-bold">Aut Lucca</h4>
+            <p class="text-danger fw-bold fs-4">$14.95</p>
+          </div>
+          <div class="col-lg-4">
+            <img
+              src="/Boots/img/menu-item-4.png"
+              class="img-fluid rounded-circle shadow border border-5 border-white mb-3 img-menu-size"
+              alt="Menu Item: Est Eligendi"
+            />
+            <h4 class="fw-bold">Est Eligendi</h4>
+            <p class="text-danger fw-bold fs-4">$8.95</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="stats-counter text-center">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-3 col-6">
+            <span class="display-4 fw-bold">232</span>
+            <p class="text-white-50">Clients</p>
+          </div>
+          <div class="col-lg-3 col-6">
+            <span class="display-4 fw-bold">521</span>
+            <p class="text-white-50">Projects</p>
+          </div>
+          <div class="col-lg-3 col-6">
+            <span class="display-4 fw-bold">1453</span>
+            <p class="text-white-50">Hours Of Support</p>
+          </div>
+          <div class="col-lg-3 col-6">
+            <span class="display-4 fw-bold">32</span>
+            <p class="text-white-50">Workers</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase mb-2">
+            Testimonials
+          </h2>
+          <p class="display-5 fw-bold">
+            What Are They <span class="text-danger">Saying About Us</span>
+          </p>
+        </div>
+        <div
+          id="carouselTestimonials"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="row align-items-center justify-content-center">
+                <div
+                  class="col-lg-6 testimonial-content bg-white p-4 shadow-sm rounded"
+                >
+                  <p class="fst-italic fs-5">
+                    "Fugiat enim eram quae cillum dolore dolor amet nulla culpa
+                    multos export minim fugiat minim velit minim dolor enim."
+                  </p>
+                  <h4 class="mb-1">Saul Goodman</h4>
+                  <p class="text-secondary small mb-2">CEO & Founder</p>
+                  <div class="text-warning">★★★★★</div>
+                </div>
+                <div class="col-lg-3 text-center mt-4 mt-lg-0">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/testimonials/testimonials-1.jpg"
+                    class="testimonial-img shadow"
+                    alt="Photo of Saul Goodman"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="row align-items-center justify-content-center">
+                <div
+                  class="col-lg-6 testimonial-content bg-white p-4 shadow-sm rounded"
+                >
+                  <p class="fst-italic fs-5">
+                    "Export minim illum ctetur quae quorum niderer enim eram
+                    quae cillum dolore dolor amet nulla culpa multos export."
+                  </p>
+                  <h4 class="mb-1">Sara Wilsson</h4>
+                  <p class="text-secondary small mb-2">Designer</p>
+                  <div class="text-warning">★★★★★</div>
+                </div>
+                <div class="col-lg-3 text-center mt-4 mt-lg-0">
+                  <img
+                    src="https://bootstrapmade.com/demo/templates/Yummy/assets/img/testimonials/testimonials-2.jpg"
+                    class="testimonial-img shadow"
+                    alt="Photo of Sara Wilsson"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-indicators position-relative mt-4">
+            <button
+              type="button"
+              data-bs-target="#carouselTestimonials"
+              data-bs-slide-to="0"
+              class="active bg-danger rounded-circle"
+              style="width: 12px; height: 12px"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselTestimonials"
+              data-bs-slide-to="1"
+              class="bg-danger rounded-circle"
+              style="width: 12px; height: 12px"
+              aria-label="Slide 2"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="events" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase mb-2">Events</h2>
+          <p class="display-5 fw-bold">
+            Share Your <span class="text-danger">Moments</span>
+          </p>
+        </div>
+        <div
+          id="carouselEvents"
+          class="carousel slide shadow-lg rounded overflow-hidden"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div
+                class="event-item"
+                style="
+                  background-image: url(&quot;/Boots/img/events-1.jpg&quot;);
+                "
+              >
+                <div class="event-overlay">
+                  <h3 class="h2 fw-bold">Custom Parties</h3>
+                  <p class="fs-4 fw-bold text-danger">$189</p>
+                  <p>Perfeito para celebrações personalizadas.</p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="event-item"
+                style="
+                  background-image: url(&quot;/Boots/img/events-2.jpg&quot;);
+                "
+              >
+                <div class="event-overlay">
+                  <h3 class="h2 fw-bold">Private Parties</h3>
+                  <p class="fs-4 fw-bold text-danger">$290</p>
+                  <p>Eventos exclusivos e reuniões privadas.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="chefs" class="py-5 bg-light">
+      <div class="container text-center">
+        <div class="mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase">Chefs</h2>
+          <p class="display-5 fw-bold">
+            Our <span class="text-danger">Professional</span> Chefs
+          </p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="/Boots/img/chefs-1.jpg"
+                class="card-img-top"
+                alt="Walter White, Master Chef"
+              />
+              <div class="card-body">
+                <h4>Walter White</h4>
+                <p>Master Chef</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="/Boots/img/chefs-2.jpg"
+                class="card-img-top"
+                alt="Sarah Jhonson, Patissier"
+              />
+              <div class="card-body">
+                <h4>Sarah Jhonson</h4>
+                <p>Patissier</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="card border-0 shadow-sm">
+              <img
+                src="/Boots/img/chefs-3.jpg"
+                class="card-img-top"
+                alt="William Anderson, Cook"
+              />
+              <div class="card-body">
+                <h4>William Anderson</h4>
+                <p>Cook</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="gallery" class="py-5">
+      <div class="container text-center">
+        <div class="mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase">Gallery</h2>
+          <p class="display-5 fw-bold">
+            Check <span class="text-danger">Our Gallery</span>
+          </p>
+        </div>
+        <div
+          id="galleryCarousel"
+          class="carousel slide shadow rounded overflow-hidden"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="/Boots/img/gallery-1.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 1"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-2.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 2"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-3.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 3"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-4.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 4"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-5.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 5"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-6.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 6"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-7.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 7"
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="/Boots/img/gallery-8.jpg"
+                class="img-gallery-carousel"
+                alt="Delicious dish gallery 8"
+              />
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#galleryCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section id="book" class="py-5 bg-light">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase mb-2">
+            Book a Table
+          </h2>
+          <p class="display-5 fw-bold">
+            Book Your <span class="text-danger">Stay With Us</span>
+          </p>
+        </div>
+        <div class="row g-0 shadow rounded overflow-hidden bg-white">
+          <div
+            class="col-lg-4 d-none d-lg-block"
+            style="
+              background: url(&quot;/Boots/img/reservation.jpg&quot;)
+                center/cover;
+            "
+          ></div>
+          <div class="col-lg-8 p-4 p-md-5">
+            <form action="#" class="row g-3">
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control bg-light"
+                  placeholder="Your Name"
+                  aria-label="Your Name"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="email"
+                  class="form-control bg-light"
+                  placeholder="Your Email"
+                  aria-label="Your Email"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="text"
+                  class="form-control bg-light"
+                  placeholder="Your Phone"
+                  aria-label="Your Phone"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="date"
+                  class="form-control bg-light"
+                  aria-label="Reservation date"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="time"
+                  class="form-control bg-light"
+                  aria-label="Reservation time"
+                />
+              </div>
+              <div class="col-md-4">
+                <input
+                  type="number"
+                  class="form-control bg-light"
+                  placeholder="# of people"
+                  aria-label="Number of people"
+                />
+              </div>
+              <div class="col-12">
+                <textarea
+                  class="form-control bg-light"
+                  rows="5"
+                  placeholder="Message"
+                  aria-label="Message"
+                ></textarea>
+              </div>
+              <div class="col-12 text-center mt-4">
+                <button
+                  type="submit"
+                  class="btn btn-danger px-5 py-3 rounded-pill fw-bold shadow"
+                >
+                  Book a Table
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="py-5">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="text-secondary fs-6 ls-2 text-uppercase mb-2">Contact</h2>
+          <p class="display-5 fw-bold">
+            Need Help? <span class="text-danger">Contact Us</span>
+          </p>
+        </div>
+        <div class="row gy-4">
+          <div class="col-12">
+            <div class="ratio ratio-21x9 shadow-sm rounded overflow-hidden">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
+                title="Google Maps location"
+              ></iframe>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 bg-light text-center shadow-sm">
+              <h5>Our Address</h5>
+              <p>A108 Adam Street, New York, NY 535022</p>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="p-4 bg-light text-center shadow-sm">
+              <h5>Email & Phone</h5>
+              <p>info@example.com / +1 5589 55488 55</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-5">
+      <div class="container">
+        <p class="fs-1 fw-bold mb-0">Yummy<span class="text-danger">.</span></p>
+        <p class="text-white-50 small">
+          © 2026 Restaurante Yummy. Todos os direitos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
