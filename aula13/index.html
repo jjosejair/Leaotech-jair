@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+     crossorigin="anonymous">
+    <script>
+//         function verificarFrete(valorCompra, eVip) {
+//     if (valorCompra > 1000 || eVip) {
+//         return "Frete grátis!";
+//     } else {
+//         return "Frete não incluso.";
+//     }
+// }
+
+// let valorCompra = prompt("Qual o valor da sua compra?");
+// let eVip = prompt("Você é VIP? (sim/não)").toLowerCase() === "sim";
+
+// valorCompra = parseFloat(valorCompra);
+
+// let resultado = verificarFrete(valorCompra, eVip);
+// alert(resultado);
+
+// let senhaCorreta = "1234";
+// let senhaDigitada = prompt("Digite a senha");
+
+// if (senhaDigitada === senhaCorreta) {
+//     alert("Acesso permitido");
+// } else {
+//     alert("acesso negado");
+// }
+
+// let idade = prompt("Qual sua idade?")
+// let temConvite = prompt("Você tem convite? (sim/não)")
+
+// idade = parseInt(idade)
+
+// temConvite = temConvite.toLowerCase() === "sim";
+//  if(idade < 16) {
+//     alert("Entrada proibida")
+//  } else if (idade >= 16 &&! temConvite){
+//     alert("precisa de convite");
+//  } else {
+//     alert("Entrada Liberada")
+    
+//  }
+
+
+
+// let valor = prompt("Qual o valor da compra?");
+
+// let vip = prompt("Você é VIP? (sim/não)");
+
+// let cupom = prompt("Você tem cupom? (sim/não)");
+
+// valor = parseFloat(valor);
+
+// vip = vip.toLowerCase() === "sim";
+// cupom = cupom.toLowerCase() === "sim";
+
+
+// if (valor >= 100) {
+
+//     if (vip || cupom) {
+        
+//         let desconto = valor * 0.10;
+//         let valorFinal = valor - desconto;
+
+//         alert("Desconto: R$ " + desconto.toFixed(2) + 
+//               "\nValor final: R$ " + valorFinal.toFixed(2));
+//     } else {
+//         alert("Sem desconto.");
+//     }
+
+// } else {
+//     alert("Sem desconto.");
+// }
+
+
+
+let salario = prompt("Qual é o seu salário?");
+
+
+let score = prompt("Qual é o seu score?");
+
+
+let clienteAntigo = prompt("Você é cliente antigo? (sim/não)");
+
+
+salario = parseFloat(salario);
+score = parseInt(score);
+clienteAntigo = clienteAntigo.toLowerCase() === "sim";
+
+
+if (salario >= 2000) {
+    
+
+    if (score >= 700 || (score >= 500 && clienteAntigo)) {
+        alert("Empréstimo aprovado!");
+    } else {
+        alert("Empréstimo negado!");
+    }
+
+} else {
+    
+    alert("Empréstimo negado!");
+}
+
+    </script>
+
+
+</head>
+  <body>
+    
+    <h1>Oi</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+     crossorigin="anonymous"></script>
+  </body>
+</html>
