@@ -1,136 +1,620 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-     crossorigin="anonymous">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
     <script>
-        // let idade = Number(prompt("Digite sua idade:"))
-        // let maiorDeIdade = idade >=18 ? "Maior de idade" : "Menor de idade";
-        // confirm(maiorDeIdade);
+      // 1.maior de idade
+      let idade = Number(prompt("Digiti sua idade"));
+      let reultado1 = idade >= 18 ? "Maior de idade" : "menor de idade";
+      console.log(reultado1);
 
-    //  let numero = Number(prompt("Digite um número:"));
-    //  let parOuImpar = numero % 2 === 0 ? "Par" : "Ímpar";
-    //  alert(parOuImpar);
+      // 2. Par ou ímpar
+      let numero = Number(prompt("Digite um número"));
+      let reultado2 = numero % 2 === 0 ? "par" : "Ìmpar";
+      console.log(reultado2);
 
-        // let nota = Number(prompt("Digite um numero:"));
-        // let resultado = nota > 7 ? "Aprovado" : "Recuperação";
-        // alert(resultado);
+      //  3. Nota do aluno
+      let nota = Number(prompt("Digite a nota do aluno:"));
+      let reultado03 = nota > 7 ? "Aprovado" : "Recupearação";
+      console.log(reultado03);
 
-        //  let numPositivo = Number (prompt("Digite um numero positivo"));
-        //  let Validacao = numPositivo > 0 ? "Número válido" : "Número inválido (negativo ou zero)";
-        //  alert(Validacao)
+      // 4. Número positivo
+      let numPositivo = Number(prompt("Digite um número:"));
+      let reultado04 =
+        numPositivo > 0
+          ? "Número válido"
+          : "Número inválido (deve ser positivo)";
+
+      // 5. Preço do produto
+      let preco = Number(prompt("Digite o preço do produto:"));
+      let reultado05 = preco > 100 ? "Produto caro" : "Produto barato";
+      console.log(reultado05);
+
+      // PARTE 2 — SWITCH
+
+      let OPCAO = Number(
+        prompt("Escolha:\n1 - Cadastrar\n2 - Listar\n3 - Sair"),
+      );
+      switch (OPCAO) {
+        case 1:
+          console.log("Cadastrar usuário");
+          break;
+        case 2:
+          console.log("Listar usuários");
+          break;
+        case 3:
+          console.log("Sair do sistema");
+          break;
+        default:
+          console.log("Opção inválida");
+      }
+
+      // 2. Nome do mês
+let mes = Number(prompt("Digite o número do mês:"));
+
+switch (mes) {
+  case 1: console.log("Janeiro"); break;
+  case 2: console.log("Fevereiro"); break;
+  case 3: console.log("Março"); break;
+  case 4: console.log("Abril"); break;
+  case 5: console.log("Maio"); break;
+  case 6: console.log("Junho"); break;
+  case 7: console.log("Julho"); break;
+  case 8: console.log("Agosto"); break;
+  case 9: console.log("Setembro"); break;
+  case 10: console.log("Outubro"); break;
+  case 11: console.log("Novembro"); break;
+  case 12: console.log("Dezembro"); break;
+  default:
+    console.log("Mês inválido");
+}
+
+// 3. Conceito escolar
+
+let conceito = prompt("Digite o conceito (A, B, C ou D):").toUpperCase();
+
+switch (conceito) {
+  case "A":
+    console.log("Excelente desempenho");
+    break;
+  case "B":
+    console.log("Bom desempenho");
+    break;
+  case "C":
+    console.log("Desempenho regular");
+    break;
+  case "D":
+    console.log("Desempenho insuficiente");
+    break;
+  default:
+    console.log("Conceito inválido");
+}
 
 
-//         let opcao = Number (prompt(
-//             "Escolha opção:\n1 - Cadastrar usuário\n2 - Listar usuário\n3 - Sair do sistema "
+// 4. Sistema de atendimento
 
-//         ));
-//         switch (opcao) {
-//             case 1:
-//                 alert("cadastrar usuário");
-//                 break
-//                  case 2:
-//                 alert("Listar usuário");
-//                 break
-//                  case 3:
-//                 alert("Sair do sistema");
-//                 break
-//                 default:
-//                     alert("Opção invalido")
-                
-//         }
-//         let mes = Number(prompt("Digite um número de 1 a 12:"));
+let escolha = Number(prompt("1 - Criar conta\n2 - Login\n3 - Recuperar senha"));
 
-//       switch (mes) {
-//         case 1: alert("Janeiro");
-//          break;
-//         case 2: alert("Fevereiro"); 
-//         break;
-//         case 3: alert("Março");
-//          break;
-//         case 4: alert("Abril");
-//          break;
-//         case 5: alert("Maio");
-//          break;
-//         case 6: alert("Junho");
-//          break;
-//         case 7: alert("Julho");
-//          break;
-//         case 8: alert("Agosto"); 
-//         break;
-//        case 9: alert("Setembro");
-//         break;
-//        case 10: alert("Outubro");
-//         break;
-//        case 11: alert("Novembro");
-//         break;
-//        case 12: alert("Dezembro");
-//         break;
-//      default: alert("Mês inválido");
-// }
-// let = conceito = prompt("Digite um conceito (A,B,C ou D)").toUpperCase();
+switch (escolha) {
+  case 1:
+    let nome = prompt("Digite seu nome:");
+    let email = prompt("Digite seu email:");
+    let senha = prompt("Digite sua senha:");
+    console.log(`Conta criada com sucesso para ${nome}`);
+    break;
 
-// switch (conceito) {
-//     case "A":
-//         alert("Excelente desempenho")
-//     break
-//      case "B":
-//         alert("Bom desempenho")
-//     break
-//      case "C":
-//         alert("Desempenho regular")
-//     break
-//       case "D":
-//         alert("Desempenho insuficiente") 
-//     break
+  case 2:
+    let emailLogin = prompt("Digite seu email:");
+    let senhaLogin = prompt("Digite sua senha:");
+    console.log("Login realizado com sucesso");
+    break;
 
-//     default: alert("Conceito inválido")
-// }
+  case 3:
+    let emailRec = prompt("Digite seu email:");
+    let metodo = prompt("Receber código por email ou SMS?");
+    console.log("Instruções enviadas");
+    break;
+
+  default:
+    console.log("Opção inválida");
+}
 
 
-// let saldo = 1000;
+// 5. Caixa eletrônico
 
-// let opcao = Number(prompt(
-//   "1 - Consultar saldo\n2 - Sacar\n3 - Deposar"
-// ));
 
-// switch (opcao) {
-//   case 1:
-//     alert("Saldo atual: R$ " + saldo);
-//     break;
+let saldo = 1000;
+let opcaoBanco = Number(prompt("1 - Saldo\n2 - Sacar\n3 - Depositar"));
 
-//   case 2:
-//     let saque = Number(prompt("Digite o valor do saque:"));
-//     if (saque <= saldo) {
-//       saldo -= saque;
-//       alert("Saque realizado. Novo saldo: R$ " + saldo);
-//     } else {
-//       alert("Saldo insuficiente");
-//     }
-//     break;
+switch (opcaoBanco) {
+  case 1:
+    console.log(`Saldo atual: R$ ${saldo}`);
+    break;
 
-//   case 3:
-//     let deposito = Number(prompt("Digite o valor do depósito:"));
-//     saldo += deposito;
-//     alert("Depósito realizado. Novo saldo: R$ " + saldo);
-//     break;
+  case 2:
+    let saque = Number(prompt("Digite o valor do saque:"));
+    if (saque <= saldo) {
+      saldo -= saque;
+      console.log(`Saque realizado. Novo saldo: R$ ${saldo}`);
+    } else {
+      console.log("Saldo insuficiente");
+    }
+    break;
 
-//   default:
-//     alert("Opção inválida");
-// }
+  case 3:
+    let deposito = Number(prompt("Digite o valor do depósito:"));
+    saldo += deposito;
+    console.log(`Depósito realizado. Novo saldo: R$ ${saldo}`);
+    break;
+
+  default:
+    console.log("Opção inválida");
+}
+
+
+// PARTE 1 — MENU COM REPETIÇÃO (switch + while)
+let opcao;
+
+do {
+  opcao = Number(prompt("Escolha:\n1 - Cadastrar\n2 - Listar\n3 - Sair"));
+
+  switch (opcao) {
+    case 1:
+      console.log("Cadastrar usuário");
+      break;
+    case 2:
+      console.log("Listar usuários");
+      break;
+    case 3:
+      console.log("Saindo do sistema...");
+      break;
+    default:
+      console.log("Opção inválida");
+  }
+
+} while (opcao !== 3);
+
+// PARTE 2 — FOR
+ 
+// 1. Lista de desejos (3 itens)
+
+ let desejos = [];
+
+for (let i = 1; i <= 3; i++) {
+  let item = prompt(`Digite o ${i}º desejo:`);
+  desejos.push(item);
+}
+
+console.log("Lista de desejos:");
+for (let i = 0; i < desejos.length; i++) {
+  console.log(desejos[i]);
+}
+
+// 2. Parcelamento
+
+let valorCompra = Number(prompt("Digite o valor da compra:"));
+let parcelas = Number(prompt("Digite o número de parcelas:"));
+
+for (let i = 1; i <= parcelas; i++) {
+  let valorParcela = valorCompra / parcelas;
+  console.log(`Parcela ${i}: R$ ${valorParcela.toFixed(2)}`);
+}
+
+
+// 3. Soma de produtos
+
+let quantidade = Number(prompt("Quantos produtos?"));
+let soma = 0;
+
+for (let i = 1; i <= quantidade; i++) {
+  let preco = Number(prompt(`Preço do produto ${i}:`));
+  soma += preco;
+}
+
+console.log(`Total da compra: R$ ${soma.toFixed(2)}`);
+
+
+// 4. Notas dos alunos
+
+let aprovados = 0;
+let recuperacao = 0;
+
+for (let i = 1; i <= 10; i++) {
+  let nota = Number(prompt(`Nota do aluno ${i}:`));
+
+  if (nota >= 7) {
+    console.log("Aprovado");
+    aprovados++;
+  } else {
+    console.log("Recuperação");
+    recuperacao++;
+  }
+}
+
+console.log(`Total aprovados: ${aprovados}`);
+console.log(`Total recuperação: ${recuperacao}`);
+
+
+
+// PARTE 3 — WHILE
+
+
+let senhaCorreta = "1234";
+let senha;
+
+while (senha !== senhaCorreta) {
+  senha = prompt("Digite a senha:");
+
+  if (senha !== senhaCorreta) {
+    console.log("Senha incorreta");
+  }
+}
+
+console.log("Acesso liberado");
+
+
+// 2. Caixa eletrônico (menu até sair)
+
+function caixaEletronico() {
+  let saldo = 1000;
+  let opcao = 0;
+
+  while (opcao !== 4) {
+    opcao = Number(prompt(
+      "1 - Saldo\n2 - Sacar\n3 - Depositar\n4 - Sair"
+    ));
+
+    switch (opcao) {
+      case 1:
+        console.log(`Saldo: R$ ${saldo}`);
+        break;
+
+      case 2:
+        let saque = Number(prompt("Valor do saque:"));
+
+        if (saque > 0 && saque <= saldo) {
+          saldo -= saque;
+          console.log(`Saque realizado. Novo saldo: R$ ${saldo}`);
+        } else {
+          console.log("Saldo insuficiente ou valor inválido");
+        }
+        break;
+
+      case 3:
+        let deposito = Number(prompt("Valor do depósito:"));
+
+        if (deposito > 0) {
+          saldo += deposito;
+          console.log(`Depósito realizado. Novo saldo: R$ ${saldo}`);
+        } else {
+          console.log("Valor inválido");
+        }
+        break;
+
+      case 4:
+        console.log("Saindo...");
+        break;
+
+      default:
+        console.log("Opção inválida");
+    }
+  }
+}
+
+caixaEletronico();
+
+
+
+
+// 3. Caixa com múltiplas compras
+
+let total = 0;
+let continuar = "s";
+
+while (continuar === "s") {
+  let valor = Number(prompt("Digite o valor da compra:"));
+  total += valor;
+
+  continuar = prompt("Deseja continuar? (s/n)").toLowerCase();
+}
+
+console.log(`Total arrecadado: R$ ${total}`);
+
+
+// 4. Validação de entrada
+
+
+function validarNumero() {
+  let numero = Number(prompt("Digite um número entre 1 e 10:"));
+
+  while (numero < 1 || numero > 10) {
+    numero = Number(prompt("Valor inválido. Digite novamente:"));
+  }
+
+  console.log("Número válido:", numero);
+}
+
+validarNumero();
+
+
+
+// 1. Confirmação de operação
+
+let resposta;
+
+do {
+  resposta = prompt("Deseja continuar? (s/n)").toLowerCase();
+
+  if (resposta !== "s" && resposta !== "n") {
+    console.log("Digite apenas 's' ou 'n'");
+  }
+
+} while (resposta !== "s" && resposta !== "n");
+
+console.log("Resposta final:", resposta);
+
+
+// 2. Sistema de menu com operações
+
+
+
+function calculadora() {
+  let opcao;
+
+  do {
+    opcao = Number(prompt(
+      "1 - Somar\n2 - Subtrair\n3 - Sair"
+    ));
+
+    switch (opcao) {
+      case 1:
+        let num1 = Number(prompt("Digite o primeiro número:"));
+        let num2 = Number(prompt("Digite o segundo número:"));
+        console.log("Resultado:", num1 + num2);
+        break;
+
+      case 2:
+        let num3 = Number(prompt("Digite o primeiro número:"));
+        let num4 = Number(prompt("Digite o segundo número:"));
+        console.log("Resultado:", num3 - num4);
+        break;
+
+      case 3:
+        console.log("Saindo...");
+        break;
+
+      default:
+        console.log("Opção inválida");
+    }
+
+  } while (opcao !== 3);
+}
+
+calculadora();
+
+
+
+
+// 1. Cadastro de produto
+function ex1() {
+  let produto = {
+    nome: prompt("Nome do produto:"),
+    preco: Number(prompt("Preço:")),
+    quantidade: Number(prompt("Quantidade:"))
+  };
+
+  let total = produto.preco * produto.quantidade;
+
+  console.log("Produto:", produto.nome);
+  console.log("Total em estoque: R$", total);
+}
+
+
+// 2. Cadastro de aluno
+function ex2() {
+  let aluno = {
+    nome: prompt("Nome:"),
+    nota1: Number(prompt("Nota 1:")),
+    nota2: Number(prompt("Nota 2:"))
+  };
+
+  let media = (aluno.nota1 + aluno.nota2) / 2;
+
+  if (media >= 7) {
+    console.log("Aprovado");
+  } else if (media >= 5) {
+    console.log("Recuperação");
+  } else {
+    console.log("Reprovado");
+  }
+}
+
+
+// 3. Funcionário
+function ex3() {
+  let funcionario = {
+    nome: prompt("Nome:"),
+    cargo: prompt("Cargo:"),
+    salario: Number(prompt("Salário:")),
+    faltas: Number(prompt("Faltas:"))
+  };
+
+  if (funcionario.faltas > 3) {
+    console.log("Perdeu o bônus");
+  } else {
+    let bonus = funcionario.salario * 0.10;
+    console.log("Bônus: R$", bonus);
+  }
+}
+
+
+// 4. Pedido
+function ex4() {
+  let pedido = {
+    cliente: prompt("Cliente:"),
+    lanche: prompt("Lanche:"),
+    quantidade: Number(prompt("Quantidade:")),
+    preco: Number(prompt("Preço:"))
+  };
+
+  let total = pedido.quantidade * pedido.preco;
+
+  if (total > 30) {
+    total *= 0.95;
+  }
+
+  console.log("Cliente:", pedido.cliente);
+  console.log("Total:", total);
+}
+
+
+// 5. Carro
+function ex5() {
+  let carro = {
+    marca: prompt("Marca:"),
+    modelo: prompt("Modelo:"),
+    ano: Number(prompt("Ano:")),
+    valor: Number(prompt("Valor:"))
+  };
+
+  let anoAtual = 2026;
+
+  if (anoAtual - carro.ano < 10) {
+    console.log("Seminovo");
+  } else {
+    console.log("Usado");
+  }
+
+  console.log(carro);
+}
+
+
+// 6. Lista de produtos
+function ex6() {
+  let produtos = [
+    { nome: "Arroz", preco: 10, estoque: 5 },
+    { nome: "Feijão", preco: 8, estoque: 0 },
+    { nome: "Macarrão", preco: 6, estoque: 10 },
+    { nome: "Óleo", preco: 7, estoque: 2 }
+  ];
+
+  for (let i = 0; i < produtos.length; i++) {
+    if (produtos[i].estoque > 0) {
+      console.log(produtos[i].nome);
+    }
+  }
+}
+
+
+// 7. Sistema de estoque
+function ex7() {
+  let produtos = [
+    { nome: "Arroz", preco: 10, estoque: 5 },
+    { nome: "Feijão", preco: 8, estoque: 2 },
+    { nome: "Macarrão", preco: 6, estoque: 10 }
+  ];
+
+  for (let i = 0; i < produtos.length; i++) {
+    let item = produtos[i];
+
+    if (item.estoque < 5) {
+      console.log("Estoque baixo:", item.nome);
+    }
+
+    console.log(item.nome, "Total:", item.preco * item.estoque);
+  }
+}
+
+
+// 8. Alunos
+function ex8() {
+  let alunos = [
+    { nome: "Ana", nota: 8 },
+    { nome: "Carlos", nota: 4 },
+    { nome: "Maria", nota: 7 }
+  ];
+
+  let aprovados = 0;
+  let reprovados = 0;
+
+  for (let i = 0; i < alunos.length; i++) {
+    if (alunos[i].nota >= 7) {
+      console.log("Aprovado:", alunos[i].nome);
+      aprovados++;
+    } else {
+      console.log("Reprovado:", alunos[i].nome);
+      reprovados++;
+    }
+  }
+
+  console.log("Aprovados:", aprovados);
+  console.log("Reprovados:", reprovados);
+}
+
+
+// 9. Vendas
+function ex9() {
+  let vendas = [
+    { cliente: "Ana", produto: "Camisa", quantidade: 2, preco: 30 },
+    { cliente: "Carlos", produto: "Calça", quantidade: 1, preco: 120 }
+  ];
+
+  let totalGeral = 0;
+
+  for (let i = 0; i < vendas.length; i++) {
+    let total = vendas[i].quantidade * vendas[i].preco;
+
+    console.log("Venda:", total);
+
+    if (total > 100) {
+      console.log("Venda alta");
+    }
+
+    totalGeral += total;
+  }
+
+  console.log("Total geral:", totalGeral);
+}
+
+
+// 10. Login
+function ex10() {
+  let usuario = {
+    login: "admin",
+    senha: "1234",
+    tipo: "admin"
+  };
+
+  let login = prompt("Login:");
+  let senha = prompt("Senha:");
+
+  if (login === usuario.login && senha === usuario.senha) {
+    if (usuario.tipo === "admin") {
+      console.log("Acesso total");
+    } else {
+      console.log("Acesso limitado");
+    }
+  } else {
+    console.log("Erro de login");
+  }
+}
 
     </script>
-
-</head>
+  </head>
   <body>
-    
     <h1></h1>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
-     crossorigin="anonymous"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
