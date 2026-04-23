@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+     crossorigin="anonymous">
+    <script>
+        let lista = [];
+let opcao = "0";
+
+while (opcao != "4") {
+
+  opcao = prompt(
+    "1 - Listar\n" +
+    "2 - Adicionar\n" +
+    "3 - Deletar\n" +
+    "4 - Sair"
+  );
+
+  // ===== LISTAR (FOR) =====
+  while (opcao == "1") {
+
+    let texto = "";
+
+    for (let i = 0; i < lista.length; i++) {
+      texto += i + " - " + lista[i].nome + "\n";
+    }
+
+    alert(texto);
+    opcao = "0"; // volta pro menu
+  }
+
+  // ===== ADICIONAR =====
+  while (opcao == "2") {
+
+    let nome = prompt("Digite o nome:");
+
+    let pessoa = {
+      nome: nome
+    };
+
+    lista.push(pessoa);
+
+    alert("Adicionado!");
+    opcao = "0"; // volta pro menu
+  }
+
+  // ===== DELETAR =====
+  while (opcao == "3") {
+
+    let num = prompt("Digite o número para deletar:");
+
+    lista.splice(num, 1);
+
+    alert("Deletado!");
+    opcao = "0"; // volta pro menu
+  }
+
+}
+
+    </script>
+
+
+</head>
+  <body>
+    
+    <h1>Oi</h1>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" 
+     crossorigin="anonymous"></script>
+  </body>
+</html>
