@@ -2,13 +2,14 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loja Mágica do Fetch</title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
     <style>
-
         body { 
-            background-color:#ffde59; 
+            background-color: #ffde59; 
             font-family: 'Comic Sans MS', sans-serif; 
         }
         
@@ -23,14 +24,19 @@
         }
     </style>
 </head>
+
 <body>
 
 <div class="container py-5 text-center">
-    <h1 class="display-5 mb-4 text-dark">Qual presente você quer ver? </h1>
+    <h1 class="display-5 mb-4 text-dark">Qual presente você quer ver?</h1>
     
     <div class="row justify-content-center">
         <div class="col-8 col-md-4">
-            <input type="number" id="numeroProduto" class="form-control form-control-lg mb-3 shadow" placeholder="Digite de 1 a 20">
+            <input 
+                type="number" 
+                id="numeroProduto" 
+                class="form-control form-control-lg mb-3 shadow" 
+                placeholder="Digite de 1 a 20">
             
             <button onclick="buscarComFetch()" class="btn btn-primary btn-lg w-100 shadow">
                 Buscar Agora!
@@ -44,18 +50,21 @@
 <script>
     function buscarComFetch() {
         const caixinha = document.getElementById('numeroProduto');
-        const numero = caixinha.value;
+        const numero = Number(caixinha.value);
         const vitrine = document.getElementById('vitrine');
-        if (numero === "") {
-            alert("Ei! Digite um número primeiro!");
+
+        if (isNaN(numero) || numero < 1 || numero > 20) {
+            alert("Digite um número válido entre 1 e 20!");
             return;
         }
+
         vitrine.innerHTML = "<h4>O robô está correndo para buscar o item " + numero + "</h4>";
+
         fetch(`https://fakestoreapi.com/products/${numero}`)
-            .then(resposta => resposta.json()) 
+            .then(resposta => resposta.json())
             .then(produto => {
-                
-                caixinha.value = ""; 
+
+                caixinha.value = "";
 
                 vitrine.innerHTML = `
                     <div class="card cartao-produto p-4 shadow-lg" style="width: 18rem;">
@@ -68,10 +77,9 @@
                     </div>
                 `;
             })
-            .catch(erro => {
-                
+            .catch(() => {
                 vitrine.innerHTML = "<h4>Ih! O robô não achou esse número. Tente de 1 a 20!</h4>";
-                caixinha.value = ""; 
+                caixinha.value = "";
             });
     }
 </script>
