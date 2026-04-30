@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Usuários</title>
+
+  <!-- Responsividade -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body class="p-4">
+
+  <h2>Cadastro de Usuários</h2>
+
+  <!-- FORMULÁRIO -->
+  <div class="mb-3">
+    <input type="text" id="nome" class="form-control mb-2" placeholder="Nome">
+    <input type="number" id="idade" class="form-control mb-2" placeholder="Idade">
+    <input type="text" id="foto" class="form-control mb-2" placeholder="URL da Foto">
+    <input type="text" id="cpf" class="form-control mb-2" placeholder="CPF">
+  </div>
+
+  <!-- BOTÕES -->
+  <button class="btn btn-success" onclick="cadastrar()">Cadastrar</button>
+  <button class="btn btn-primary" onclick="listar()">Listar</button>
+  <button class="btn btn-warning" onclick="editar()">Editar</button>
+
+  <hr>
+
+  <!-- LISTA -->
+  <div id="lista" class="row"></div>
+
+  <script>
+    // Pegando os elementos UMA vez (boa prática)
+    const nomeInput = document.getElementById("nome");
+    const idadeInput = document.getElementById("idade");
+    const fotoInput = document.getElementById("foto");
+    const cpfInput = document.getElementById("cpf");
+
+    // ARRAY INICIAL
+    let usuarios = [
+      { nome: "João", idade: 25, foto: "https://randomuser.me/api/portraits/men/1.jpg", cpf: "111" },
+      { nome: "Maria", idade: 30, foto: "https://randomuser.me/api/portraits/women/2.jpg", cpf: "222" },
+      { nome: "Carlos", idade: 28, foto: "https://randomuser.me/api/portraits/men/3.jpg", cpf: "333" }
+    ];
+
+    // CADASTRAR
+    function cadastrar() {
+
+      // Usando .value a partir das variáveis
+      const nomeDigitado = nomeInput.value;
+      const idadeDigitada = idadeInput.value;
+      const fotoDigitada = fotoInput.value;
+      const cpfDigitado = cpfInput.value;
+
+      const usuario = {
+        nome: nomeDigitado,
+        idade: idadeDigitada,
+        foto: fotoDigitada,
+        cpf: cpfDigitado
+      };
+
+      usuarios.push(usuario);
+
+      alert("Usuário cadastrado!");
+      limparCampos();
+    }
+
+    // LISTAR
+    function listar() {
+      const lista = document.getElementById("lista");
+      lista.innerHTML = "";
+
+      usuarios.forEach(user => {
+        lista.innerHTML += `
+          <div class="col-md-4">
+            <div class="card mb-3">
+              <img src="${user.foto}" class="card-img-top" height="200">
+              <div class="card-body">
+                <h5>${user.nome}</h5>
+                <p>Idade: ${user.idade}</p>
+                <p>CPF: ${user.cpf}</p>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    // EDITAR
+    function editar() {
+      const cpfDigitado = cpfInput.value;
+
+      const usuario = usuarios.find(u => u.cpf === cpfDigitado);
+
+      if (!usuario) {
+        alert("Usuário não encontrado!");
+        return;
+      }
+
+      nomeInput.value = usuario.nome;
+      idadeInput.value = usuario.idade;
+      fotoInput.value = usuario.foto;
+
+      alert("Usuário carregado para edição.");
+    }
+
+    function limparCampos() {
+      nomeInput.value = "";
+      idadeInput.value = "";
+      fotoInput.value = "";
+      cpfInput.value = "";
+    }
+
+  </script>
+
+</body>
+</html>
