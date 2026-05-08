@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Mini Loja</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        background-color: #f5f5f5;
+      }
+
+      .card-produto {
+        transition: 0.3s;
+      }
+
+      .card-produto:hover {
+        transform: scale(1.03);
+      }
+
+      .imagem-produto {
+        height: 200px;
+        object-fit: contain;
+      }
+
+      .imagem-detalhe {
+        max-height: 350px;
+        object-fit: contain;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <div class="container">
+        <span class="navbar-brand"> Mini Loja </span>
+      </div>
+    </nav>
+    <div class="container mt-5">
+      <h1 class="fw-bold">Produtos da Loja</h1>
+
+      <p class="text-secondary">Clique em "Ver Produto"</p>
+
+      <div id="listaProdutos" class="row g-4 mt-4"></div>
+
+      <div id="areaDetalhe" class="card mt-5 p-4 shadow d-none"></div>
+    </div>
+
+    <script>
+      const listaProdutos = document.getElementById("listaProdutos");
+
+      const areaDetalhe = document.getElementById("areaDetalhe");
+
+      let produtos = [];
+
+      async function buscarProdutos() {
+        const resposta = await fetch("https://fakestoreapi.com/products");
+
+        produtos = await resposta.json();
+
+        produtos.forEach((produto, index) => {
+          const coluna = document.createElement("div");
+
+          coluna.className = "col-md-3";
+
+          coluna.innerHTML = `
+
+                    <div class="card h-100 shadow card-produto">
+
+                        <!-- imagem -->
+                        <img
+                            src="${produto.image}"
+                            alt="Imagem do produto ${produto.title}"
+                            class="card-img-top p-4 imagem-produto"
+                        >
+
+                        <!-- corpo -->
+                        <div class="card-body d-flex flex-column">
+
+                            <!-- titulo -->
+                            <h5>
+                                ${produto.title}
+                            </h5>
+
+                            <!-- preço -->
+                            <h3 class="text-success mt-3">
+                                R$ ${produto.price}
+                            </h3>
+
+                            <!-- botão -->
+                            <button
+                                class="btn btn-primary mt-auto"
+                                onclick="mostrarDetalhe(${index})"
+                            >
+                                Ver Produto
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                `;
+
+          listaProdutos.appendChild(coluna);
+        });
+      }
+
+      function mostrarDetalhe(index) {
+        const produto = produtos[index];
+
+        areaDetalhe.classList.remove("d-none");
+
+        areaDetalhe.innerHTML = `
+
+                <div class="row align-items-center">
+
+                    <!-- imagem -->
+                    <div class="col-md-5 text-center">
+
+                        <img
+                            src="${produto.image}"
+                            alt="Imagem detalhada do produto ${produto.title}"
+                            class="img-fluid imagem-detalhe"
+                        >
+
+                    </div>
+
+
+
+                    <!-- texto -->
+                    <div class="col-md-7">
+
+                        <!-- titulo -->
+                        <h2 class="fw-bold">
+                            ${produto.title}
+                        </h2>
+
+                        <!-- descrição -->
+                        <p class="mt-3">
+                            ${produto.description}
+                        </p>
+
+                        <!-- preço -->
+                        <h2 class="text-success">
+                            R$ ${produto.price}
+                        </h2>
+
+                        <!-- botão -->
+                        <button class="btn btn-success btn-lg mt-3">
+                            Comprar
+                        </button>
+
+                    </div>
+
+                </div>
+
+            `;
+
+        areaDetalhe.scrollIntoView({
+          behavior: "smooth",
+        });
+      }
+
+      buscarProdutos();
+    </script>
+  </body>
+</html>
