@@ -71,6 +71,7 @@
 
 const {createClient} = require ('@supabase/supabase-js')
 const prompt = require ('prompt-sync')()
+require('dotenv').config()
 
 const supabase = createClient(
     process.env.SUPABASE_URL,
